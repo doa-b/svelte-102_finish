@@ -2,6 +2,13 @@
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
 
+Steps:
+1. npm create vite@latest
+2. choose a project name
+3. select Svelte
+4. select Typescript
+5. run npm install
+
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
