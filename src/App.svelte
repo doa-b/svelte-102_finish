@@ -42,8 +42,12 @@
 
 	function addToGilde(event: CustomEvent<DeveloperType>) {
 		const nieuwlid = event.detail;
-		gildeleden = [...gildeleden, nieuwlid];
+
+		leden.update((current) => {
+			return [...current, nieuwlid];
+        });
     }
+	
 </script>
 
 <main>
