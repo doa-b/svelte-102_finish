@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type {DeveloperType} from "../types/developer";
 	import leden from "../gilde-store";
 
 	export let id: string;
