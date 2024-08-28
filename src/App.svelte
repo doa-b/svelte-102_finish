@@ -44,8 +44,8 @@
 	let gildeleden: Array<DeveloperType> = [];
 
 	function addToGilde(event: CustomEvent<DeveloperType>) {
-		gildeleden.push(event.detail);
-		console.log(gildeleden)
+		const nieuwlid = event.detail;
+		gildeleden = [...gildeleden, nieuwlid];
     }
 </script>
 
@@ -55,7 +55,7 @@
         <h2>Typescript Gilde</h2>
     {/if}
     <ol>
-        {#each gildeleden as lid (lid.id)}
+        {#each gildeleden as lid}
             <li>{lid.voornaam}</li>
         {:else }
             <p>Nodig leden uit</p>
