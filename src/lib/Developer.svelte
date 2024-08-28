@@ -1,6 +1,6 @@
 <script lang="ts">
-    let voornaam = 'Bob';
-    let achternaam = 'Bob de Bouwer';
+	let voornaam = 'Bob';
+	let achternaam = 'Bob de Bouwer';
 	let expertise = 'FE development in TS en svelte';
 	let salaris = 5000;
 	let avatar = '/man.png';
@@ -8,15 +8,18 @@
 
 	function togglepluim() {
 		pluim = !pluim;
-    }
+	}
+
 </script>
 <input type="text" bind:value={voornaam}>
 <div class="card">
     <img src={avatar} alt="Avatar">
-    <h4 class:highlight={pluim}>{voornaam} {achternaam} {salaris}€</h4>
-    <p>{expertise}</p>
-    <div class="controls">
-        <button on:click={togglepluim}> Geef {voornaam} een pluim</button>
+    <div class="container">
+        <h4 class:highlight={pluim}>{voornaam} {achternaam} {salaris}€</h4>
+        <p>{expertise}</p>
+        <div class="controls">
+            <button on:click={togglepluim}> Geef {voornaam} een pluim</button>
+        </div>
     </div>
 </div>
 
