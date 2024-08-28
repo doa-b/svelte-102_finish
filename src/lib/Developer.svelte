@@ -8,10 +8,6 @@
 	export let avatar = '/man.png';
 	export let pluim = false;
 
-	function togglepluim() {
-		pluim = !pluim;
-	}
-
 	function addLid() {
 		const nieuwLid = {voornaam, achternaam, expertise, avatar, pluim, id};
 		leden.update((current) => {
@@ -28,7 +24,7 @@
         <h4 class:highlight={pluim}>{voornaam} {achternaam} ({id})</h4>
         <p>{expertise}</p>
         <div class="controls">
-            <button on:click={togglepluim}>{buttonText}</button>
+            <button on:click={() => pluim = !pluim}>{(buttonText)}</button>
             <button on:click={addLid}>Maak gilde-lid</button>
         </div>
     </div>
