@@ -1,5 +1,6 @@
 <script lang="ts">
 	import {createEventDispatcher} from "svelte";
+	import type {DeveloperType} from "../types/developer";
 
 	export let id: string;
 	export let voornaam = 'Bob';
@@ -12,7 +13,7 @@
 		pluim = !pluim;
 	}
 
-	const dispatch = createEventDispatcher();
+	const dispatch = createEventDispatcher<{ 'add': DeveloperType }>();
 
 	function addLid() {
 		const lid = {voornaam, achternaam, expertise, avatar, pluim, id}
