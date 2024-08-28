@@ -10,9 +10,7 @@
 
 	function addLid() {
 		const nieuwLid = {voornaam, achternaam, expertise, avatar, pluim, id};
-		leden.update((current) => {
-			return [...current, nieuwLid];
-		});
+		leden.add(nieuwLid);
 	}
 
 	$: buttonText = pluim ? 'Pak pluim af' : `Geef ${voornaam} een pluim`
