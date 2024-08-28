@@ -38,13 +38,12 @@
 			pluim: false
 		},
 	];
-	let gildeleden: Array<DeveloperType> = [];
 
 </script>
 
 <main>
     <h1> Welkom TypeScripters</h1>
-    {#if gildeleden.length > 0}
+    {#if $leden.length > 0}
         <h2>Typescript Gilde</h2>
     {/if}
     <ol>
