@@ -5,13 +5,17 @@ const initial: Array<DeveloperType> = [];
 
 const leden = writable(initial);
 
-const customStore = {
-	subscribe: leden.subscribe,
-	add: (lid: DeveloperType): void => {
-		leden.update((current) => {
-			return [...current, lid]
-		})
+function createStore() {
+	const {subscribe, update} = writable(initial);
+
+	return {
+		subscribe,
+		add: (lid: DeveloperType): void => {
+			update((current) => {
+				return [...current, lid]
+			})
+		}
 	}
 }
 
-export default customStore;
+export default createStore();
