@@ -9,7 +9,7 @@
 
 <div>
     {#each developers as developer (developer.id)}
-        <Developer {...developer}/>
+        <Developer {...developer} on:add />
     {/each}
 </div>
 
