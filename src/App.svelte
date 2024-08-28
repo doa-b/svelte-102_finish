@@ -2,6 +2,7 @@
 
 	import DeveloperLijst from "./lib/DeveloperLijst.svelte";
 	import type {DeveloperType} from "./types/developer";
+    import leden from "./gilde-store";
 
 	let developers: Array<DeveloperType> = [
 		{
@@ -51,7 +52,7 @@
         <h2>Typescript Gilde</h2>
     {/if}
     <ol>
-        {#each gildeleden as lid}
+        {#each $leden as lid}
             <li>{lid.voornaam}</li>
         {:else }
             <p>Nodig leden uit</p>
