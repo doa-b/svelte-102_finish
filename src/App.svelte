@@ -49,11 +49,10 @@
     <h1> Welkom TypeScripters</h1>
     <h2>Typescript Gilde</h2>
     <ol>
-
+        {#each gildeleden as lid (lid.id)}
+            <li>{lid.voornaam}</li>
+        {/each}
     </ol>
-    {#each gildeleden as lid (lid.id)}
-        <li>{lid.voornaam}</li>
-    {/each}
     <DeveloperLijst {developers}/>
 </main>
 
