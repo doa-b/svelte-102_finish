@@ -40,14 +40,6 @@
 	];
 	let gildeleden: Array<DeveloperType> = [];
 
-	function addToGilde(event: CustomEvent<DeveloperType>) {
-		const nieuwlid = event.detail;
-
-		leden.update((current) => {
-			return [...current, nieuwlid];
-        });
-    }
-	
 </script>
 
 <main>
@@ -62,7 +54,7 @@
             <p>Nodig leden uit</p>
         {/each}
     </ol>
-    <DeveloperLijst {developers} on:add={addToGilde}/>
+    <DeveloperLijst {developers}/>
 </main>
 
 <style>

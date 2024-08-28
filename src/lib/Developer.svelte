@@ -1,6 +1,6 @@
 <script lang="ts">
-	import {createEventDispatcher} from "svelte";
 	import type {DeveloperType} from "../types/developer";
+	import leden from "../gilde-store";
 
 	export let id: string;
 	export let voornaam = 'Bob';
@@ -13,12 +13,12 @@
 		pluim = !pluim;
 	}
 
-	const dispatch = createEventDispatcher<{ 'add': DeveloperType }>();
-
 	function addLid() {
-		const lid = {voornaam, achternaam, expertise, avatar, pluim, id}
-		dispatch('add', lid);
-    }
+		const nieuwLid = {voornaam, achternaam, expertise, avatar, pluim, id};
+		leden.update((current) => {
+			return [...current, nieuwLid];
+		});
+	}
 
 	$: buttonText = pluim ? 'Pak pluim af' : `Geef ${voornaam} een pluim`
 
