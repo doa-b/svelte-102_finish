@@ -6,7 +6,7 @@
 <main>
     <h1> Welkom TypeScripters</h1>
     <div>
-        <Developer/>
+        <Developer voornaam="Lisa" achternaam="Simpson" expertise="Backend developer in NodeJS" avatar="/vrouw.png"/>
     </div>
 </main>
 
