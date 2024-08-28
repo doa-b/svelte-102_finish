@@ -42,7 +42,6 @@
 		},
 	];
 	let gildeleden: Array<DeveloperType> = [];
-
 </script>
 
 <main>
