@@ -1,4 +1,7 @@
 <script lang="ts">
+	import {createEventDispatcher} from "svelte";
+	import type {DeveloperType} from "../types/developer";
+
 	export let voornaam = 'Bob';
 	export let achternaam = 'Bob de Bouwer';
 	export let expertise = 'FE development in TS en svelte';
@@ -10,6 +13,13 @@
 		pluim = !pluim;
 	}
 
+	const dispatch = createEventDispatcher();
+
+	function addLid() {
+		const lid = {voornaam, achternaam, expertise, salaris, avatar, pluim}
+		dispatch('add', lid);
+    }
+
 	$: buttonText = pluim ? 'Pak pluim af' : `Geef ${voornaam} een pluim`
 
 </script>
@@ -20,6 +30,7 @@
         <p>{expertise}</p>
         <div class="controls">
             <button on:click={togglepluim}>{buttonText}</button>
+            <button on:click={addLid}>Maak gilde-lid</button>
         </div>
     </div>
 </div>
