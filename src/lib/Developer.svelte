@@ -1,11 +1,10 @@
 <script lang="ts">
 	import {createEventDispatcher} from "svelte";
-	import type {DeveloperType} from "../types/developer";
 
+	export let id: string;
 	export let voornaam = 'Bob';
 	export let achternaam = 'Bob de Bouwer';
 	export let expertise = 'FE development in TS en svelte';
-	export let salaris = 5000;
 	export let avatar = '/man.png';
 	export let pluim = false;
 
@@ -16,7 +15,7 @@
 	const dispatch = createEventDispatcher();
 
 	function addLid() {
-		const lid = {voornaam, achternaam, expertise, salaris, avatar, pluim}
+		const lid = {voornaam, achternaam, expertise, avatar, pluim, id}
 		dispatch('add', lid);
     }
 
@@ -26,7 +25,7 @@
 <div class="card">
     <img src={avatar} alt="Avatar">
     <div class="container">
-        <h4 class:highlight={pluim}>{voornaam} {achternaam} {salaris}€</h4>
+        <h4 class:highlight={pluim}>{voornaam} {achternaam} ({id})</h4>
         <p>{expertise}</p>
         <div class="controls">
             <button on:click={togglepluim}>{buttonText}</button>
