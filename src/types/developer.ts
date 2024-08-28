@@ -1,4 +1,4 @@
-export type Developer = {
+export type DeveloperType = {
 	id: string;
 	voornaam: string;
 	achternaam: string;

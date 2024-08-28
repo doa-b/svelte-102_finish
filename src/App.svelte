@@ -1,9 +1,9 @@
 <script lang="ts">
 
 	import DeveloperLijst from "./lib/DeveloperLijst.svelte";
-	import type {Developer} from "./types/developer";
+	import type {DeveloperType} from "./types/developer";
 
-	let developers: Array<Developer> = [
+	let developers: Array<DeveloperType> = [
 		{
 			id: 'AL00001',
 			voornaam: 'Bob',
@@ -46,7 +46,7 @@
 <main>
     <h1> Welkom TypeScripters</h1>
       <div>
-       <DeveloperLijst/>
+       <DeveloperLijst {developers}/>
     </div>
 </main>
 
