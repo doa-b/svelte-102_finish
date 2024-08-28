@@ -40,11 +40,20 @@
 			avatar: '/man.png',
 			pluim: false
 		},
-	]
+	];
+	let gildeleden: Array<DeveloperType> = [];
+
 </script>
 
 <main>
     <h1> Welkom TypeScripters</h1>
+    <h2>Typescript Gilde</h2>
+    <ol>
+
+    </ol>
+    {#each gildeleden as lid (lid.id)}
+        <li>{lid.voornaam}</li>
+    {/each}
     <DeveloperLijst {developers}/>
 </main>
 
