@@ -1,24 +1,25 @@
 <script lang="ts">
-	let voornaam = 'Bob';
-	let achternaam = 'Bob de Bouwer';
-	let expertise = 'FE development in TS en svelte';
-	let salaris = 5000;
-	let avatar = '/man.png';
-	let pluim = false;
+	export let voornaam = 'Bob';
+	export let achternaam = 'Bob de Bouwer';
+	export let expertise = 'FE development in TS en svelte';
+	export let salaris = 5000;
+	export let avatar = '/man.png';
+	export let pluim = false;
 
 	function togglepluim() {
 		pluim = !pluim;
 	}
 
+	$: buttonText = pluim ? 'Pak pluim af' : `Geef ${voornaam} een pluim`
+
 </script>
-<input type="text" bind:value={voornaam}>
 <div class="card">
     <img src={avatar} alt="Avatar">
     <div class="container">
         <h4 class:highlight={pluim}>{voornaam} {achternaam} {salaris}€</h4>
         <p>{expertise}</p>
         <div class="controls">
-            <button on:click={togglepluim}> Geef {voornaam} een pluim</button>
+            <button on:click={togglepluim}>{buttonText}</button>
         </div>
     </div>
 </div>
