@@ -45,13 +45,9 @@
 
 <main>
     <h1> Welkom TypeScripters</h1>
-      <div>
-       <DeveloperLijst {developers}/>
-    </div>
+    <DeveloperLijst {developers}/>
 </main>
 
 <style>
- div {
-  width: 250px;
- }
+
 </style>
