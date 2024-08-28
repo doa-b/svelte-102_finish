@@ -44,7 +44,8 @@
 	let gildeleden: Array<DeveloperType> = [];
 
 	function addToGilde(event: CustomEvent<DeveloperType>) {
-		console.log(event)
+		gildeleden.push(event.detail);
+		console.log(gildeleden)
     }
 </script>
 
