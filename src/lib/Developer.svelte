@@ -4,7 +4,7 @@
 	let salaris = 5000;
 	let avatar = '/man.png'
 </script>
-
+<input type="text" bind:value={naam}>
 <div class="card">
     <img src={avatar} alt="Avatar">
     <h4>{naam} {salaris}€</h4>
