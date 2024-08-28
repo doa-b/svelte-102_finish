@@ -11,4 +11,11 @@ import Developer from "./Developer.svelte";
 </div>
 
 <style>
+    div {
+        padding: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 2rem;
+    }
 </style>
